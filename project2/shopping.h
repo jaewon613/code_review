@@ -13,6 +13,12 @@
 //     tobuylist.PushList(obj1);
 //     tobuylist.PushList(obj2);
 //     tobuylist.PrintList();
+enum Type
+{
+	TYPE_PRICE,
+	TYPE_INDEX,
+};
+
 class Shopping{
  public:
   void PushList(Goods object);
@@ -23,6 +29,7 @@ class Shopping{
 
  private:
   std::vector<Goods> shopping_list_;
+  void SortCore(int type);
 };
 
 #endif  // SHOPPING_H_
